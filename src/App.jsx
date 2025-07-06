@@ -46,8 +46,8 @@ function App() {
   useEffect(() => {
     async function loadData() {
       try {
-        // Load all possible values from Values.xlsx
-        const valuesRes = await fetch("/src/assets/Values.xlsx");
+        // Load all possible values from Values.xlsx (now in public/)
+        const valuesRes = await fetch("/Values.xlsx");
         const valuesBuffer = await valuesRes.arrayBuffer();
         const valuesRows = parseXLSX(valuesBuffer);
         // Assume the characteristic name is in the first column of each row, and deduplicate
@@ -57,8 +57,8 @@ function App() {
           )
         );
 
-        // Load user data from Data.csv
-        const dataRes = await fetch("/src/assets/Data.csv");
+        // Load user data from Data.csv (now in public/)
+        const dataRes = await fetch("/Data.csv");
         const dataText = await dataRes.text();
         const dataRows = parseCSV(dataText);
 
