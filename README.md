@@ -17,7 +17,7 @@ A digital React app for visualizing group rankings of characteristics, inspired 
 - Node.js (v18 or newer recommended)
 - npm
 
-### Installation
+### Installation (Local Node.js)
 
 1. Clone the repository:
 
@@ -40,23 +40,42 @@ A digital React app for visualizing group rankings of characteristics, inspired 
 
 4. Open your browser and go to [http://localhost:5173](http://localhost:5173)
 
-### Running with Docker
+---
+
+## Running with Docker (No Node.js/npm Needed)
 
 If you want to run the app in a container (no need for local Node/npm):
 
-1. Build the Docker image:
+1. **Install Docker Desktop**
+
+   - Download and install Docker Desktop from [https://www.docker.com/products/docker-desktop/](https://www.docker.com/products/docker-desktop/)
+   - Make sure Docker is running
+
+2. **Clone the repository:**
+
+   ```sh
+   git clone https://github.com/trajnovd/VisualizationApp.git
+   cd VisualizationApp
+   ```
+
+3. **Build the Docker image:**
 
    ```sh
    docker build -t characteristics-app .
    ```
 
-2. Run the container:
+4. **Run the Docker container:**
 
    ```sh
    docker run -p 4173:4173 characteristics-app
    ```
 
-3. Open your browser and go to [http://localhost:4173](http://localhost:4173)
+5. **Open the app in your browser:**
+   - Go to [http://localhost:4173](http://localhost:4173)
+
+**Note:** You do NOT need Node.js or npm installed if you use Docker. All dependencies are handled inside the container.
+
+---
 
 ### Project Structure
 
